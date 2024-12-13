@@ -1,0 +1,459 @@
+    1  sudo apt update
+    2  sudo apt install git vim tree curl build-essential libncurses5-dev libssl-dev bc bison flex cpio gzip qemu-system-arm u-boot-tools android-tools-fsutils -y
+    3  sudo apt install ccache -y
+    4  ccache -M 5G
+    5  cd ~/Downloads
+    6  wget https://developer.arm.com/-/media/Files/downloads/gnu-a/8.3-2019.03/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf.tar.xz
+    7  sudo tar -xJvf gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf.tar.xz -C /opt/
+    8  mkdir -p ~/repos
+    9  ls
+   10  cd ~/repos
+   11  git clone https://gitlab.denx.de/u-boot/u-boot.git
+   12  sudo apt install git
+   13  git clone https://gitlab.denx.de/u-boot/u-boot.git
+   14  git checkout v2019.07
+   15  cd uboot
+   16  ls
+   17  cd u-boot
+   18  git checkout v2019.07
+   19  export PATH=/opt/gcc-arm-8.3-2019.03-x86_64-arm-eabi/bin:$PATH
+   20  export CROSS_COMPILE="ccache arm-eabi-"
+   21  export ARCH=arm
+   22  make am335x_boneblack_defconfig
+   23  sudo apt install make
+   24  make am335x_boneblack_defconfig
+   25  make -j$(nproc)
+   26  sudo apt update
+   27  sudo apt install gcc g++ build-essential -y
+   28  which arm-eabi-gcc
+   29  export PATH=/opt/gcc-arm-8.3-2019.03-x86_64-arm-eabi/bin:$PATH
+   30  export CROSS_COMPILE="ccache arm-eabi-"
+   31  export ARCH=arm
+   32  make am335x_boneblack_defconfig
+   33  make -j$(nproc)
+   34  which arm-eabi-gcc
+   35  cd ~/repos/u-boot
+   36  make am335x_boneblack_defconfig
+   37  sudo apt install ccache -y
+   38  sudo apt install bison flex -y
+   39  ls /opt/gcc-arm-8.3-2019.03-x86_64-arm-eabi/bin/arm-eabi-gcc
+   40  cd ~/Downloads
+   41  sudo tar -xJvf gcc-arm-8.3-2019.03-x86_64-arm-eabi.tar.xz -C /opt/
+   42  ls
+   43  sudo tar -xJvf gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf.tar.xz -C /opt/
+   44  ls
+   45  ls /opt/
+   46  cd ~/repos
+   47  cd u-boot
+   48  git checkout v2019.07
+   49  export PATH=/opt/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin:$PATH
+   50  export CROSS_COMPILE="ccache arm-linux-"
+   51  export ARCH=arm
+   52  make am335x_boneblack_defconfig
+   53  make -j$(nproc)
+   54  which arm-eabi-gcc
+   55  which arm-linux
+   56  which arm-linux-gcc
+   57  which arm-linux-gnueabih
+   58  sudo apt install git make gcc g++ build-essential libncurses5-dev libssl-dev bc bison flex cpio gzip qemu-system-arm u-boot-tools -y
+   59  cd ~/Downloads
+   60  sudo tar -xJvf gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf.tar.xz -C /opt/
+   61  export PATH=/opt/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin:$PATH
+   62  ls /opt/
+   63  mkdir -p ~/repos
+   64  cd ..
+   65  cd repos
+   66  ls
+   67  git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git
+   68  cd u-boot
+   69  export CROSS_COMPILE="arm-linux-gnueabihf-"
+   70  export ARCH=arm
+   71  make am335x_boneblack_defconfig
+   72  make -j$(nproc)
+   73  git checkout v2019.07
+   74  make am335x_boneblack_defconfig
+   75  ls configs | grep am335x_boneblack
+   76  make menuconfig
+   77  make am335x_boneblack_defconfig
+   78  sudo apt update
+   79  sudo apt install vim-gtk3
+   80  sudo apt install ccache
+   81  ccache -M 5G
+   82  ccache -s
+   83  ccache -C
+   84  tree ~/.ccache
+   85  sudo snap install tree
+   86  tree ~/.ccache
+   87  ls Downloads
+   88  export CROSS_COMPILE="ccache arm-linux-gnueabihf-"
+   89  man ccache
+   90  sudo tar xJvf gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf.tar.xz -C /opt/
+   91  cd Downloads
+   92  sudo tar xJvf gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf.tar.xz -C /opt/
+   93  cd .
+   94  cd ..
+   95  ls /opt/
+   96  sudo apt install make libncurses5-dev libssl-dev bc bison flex
+   97  mkdir ~/repos
+   98  cd ~repos
+   99  cd repos
+  100  ls
+  101  rm -r u-boot
+  102  ls
+  103  git clone https://gitlab.denx.de/u-boot/u-boot.git
+  104  cd u-boot
+  105  git tag | grep -v rc | tail -5
+  106  git checkout v2024.10
+  107  curl https://patchwork.ozlabs.org/series/130450/mbox/ | git am
+  108  sudo snap install curl
+  109  curl https://patchwork.ozlabs.org/series/130450/mbox/ | git am
+  110  git config --global user.email forkreros228@gmail.com
+  111  git config --global user.name SCAR
+  112  curl https://patchwork.ozlabs.org/series/130450/mbox/ | git am
+  113  export PATH=/opt/gcc-arm-8.3-219.03-x86_64-arm-linux-gnueabihf/bin:$PATH
+  114  export CROSS_COMPILE='ccache arm-linux-gnueabihf-'
+  115  export ARCH=arm
+  116  make am335x_boneblack_defconfig
+  117  export CROSS_COMPILE='ccache arm-linux-gnueabihf-gcc'
+  118  make am335x_boneblack_defconfig
+  119  export CROSS_COMPILE='ccache arm-linux-gnueabihf-'
+  120  make am335x_boneblack
+  121  gcc --version
+  122  sudo apt install gcc-9
+  123  sudo update alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 9
+  124  sudo update--alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 9
+  125  udo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 9
+  126  sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 9
+  127  gcc --version
+  128  ls /opt/
+  129  export PATH=/opt/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin:$PATH
+  130  export CROSS_COMPILE='ccache arm-linux-gnueabihf-'
+  131  export ARCH=arm
+  132  make am335x_boneblack_defconfig
+  133  make -j4
+  134  sudo apt-get install uuid-dev
+  135  make -j4
+  136  sudo apt-get install libgnutls28-dev
+  137  make -j4
+  138  make am335x_boneblack_defconfig
+  139  make -j4
+  140  ls
+  141  make distclean
+  142  ls
+  143  make am335x_boneblack_defconfig
+  144  make -j4
+  145  cd ..
+  146  cd linux-stable
+  147  git checkout linux-4.19.y
+  148  ls /downloads/
+  149  ls */downloads/
+  150  ls ./downloads
+  151  cd ..
+  152  ls
+  153  ls Downloads
+  154  cd repos
+  155  cd linux-stable
+  156  export PATH=/opt/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin:$PATH
+  157  export CROSS_COMPILE='ccache arm-linux-gnueabihf-'
+  158  export ARCH=arm
+  159  mkdir fragments
+  160  vim fragments/bbb.cfg
+  161  cat fragment/bbb.cfg
+  162  cd fragments
+  163  ls
+  164  cat bbb.cfg
+  165  cd -
+  166  ./scripts/kconfig/merge_config.sh arch/arm/configs/multi_v7_defconfig fragments/bbb.cfg
+  167  make -j4 zImage modules am335x-boneblack.dtb
+  168  ls
+  169  ;s arch/arm/boot
+  170  ls arch/arm/boot
+  171  ls arch/arm/boot/dts/
+  172  ls arch/arm/boot/dts/ | grep boneblack
+  173  cd ..
+  174  git clone git://git.busybox.net/busybox
+  175  git branch -a | grep stable | sort -V | tail -1
+  176  git checkout 1_31_stable
+  177  cd busybox
+  178  git branch -a | grep stable | sort -V | tail -1
+  179  git checkout 1_37_stable
+  180  cd ..
+  181  ls Downloads
+  182  cd repos/busybox
+  183  export ARCH=arm
+  184  export PATH=/opt/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin:$PATH
+  185  export CROSS_COMPILE="ccache arm-linux-gnueabihf-"
+  186  make defconfig
+  187  make -j4
+  188  make install
+  189  ls
+  190  make defconfig
+  191  make install
+  192  make clean
+  193  make defconfig
+  194  make
+  195  make clear
+  196  make clean
+  197  git checkout 1_31_stable
+  198  export ARCH=arm
+  199  ls /Downloads/
+  200  cd ~/Downloads
+  201  ls
+  202  cd ~/busybox
+  203  cd ~/busybox/
+  204  cd ~/repos/busybox
+  205  export PATH=/opt/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin:$PATH
+  206  export CROSS_COMPILE="ccache arm-linux-gnueabihf-"
+  207  make defconfig
+  208  make -j4
+  209  make install
+  210  mkdir -p _install/{boot,dev,etc\/init.d,lib,proc,root,sys\/kernel\/debug,tmp}
+  211  cd _install
+  212  ls
+  213  cd etc
+  214  cd init.d
+  215  vim rcS
+  216  ls rcS
+  217  cat rcS
+  218  vim rcS
+  219  chmod +x rcS
+  220  ln -s bin/busybox _install/init
+  221  cd ..
+  222  ln -s bin/busybox _install/init
+  223  cd ..
+  224  ls
+  225  ln -s bin/busybox _install/init
+  226  cd _install/boot
+  227  cp ~/repos/linux-stable/arch/arm/boot/zImage
+  228  cp ~/repos/linux-stable/arch/arm/boot/zImage .
+  229  cp ~/repos/linux-stable/arch/arm/boot/dts/am335x-boneblack.dtb .
+  230  cp ~/repos/linux-stable/System.map .
+  231  cp ~/repos/linux-stable/.config ./config
+  232  cd -
+  233  cd ~repos/linux-stable
+  234  export INSTALL_MOD_PATH=~/repos/busybox/_install
+  235  export ARCH=arm
+  236  make modules_install
+  237  make config
+  238  make modules_install
+  239  ${CROSS_COMPILE}readelf -d _install/bin/busybox | grep NEEDED
+  240  cd _install/lib
+  241  libc_dir=$(${CROSS_COMPILE}gcc -print-sysroot)/lib
+  242  cp -a $libc_dir/*.so* .
+  243  cd -
+  244  echo '$MODALIAS=.* root:root 660 @modprobe "$MODALIAS"' > _install/etc/mdev.conf
+  245  echo 'root:x:0:' > _install/etc/group
+  246  echo 'root:x:0:0:root:/root:/bin/sh' > _install/etc/passwd
+  247  echo 'root::10933:0:99999:7:::' > _install/etc/shadow
+  248  echo "nameserver 8.8.8.8" > _install/etc/resolv.conf
+  249  sudo apt install qemu-system-arm
+  250  cd ~/repos/busybox
+  251  cd _install
+  252  find . | cpio -o -H newc | gzip > ../rootfs.cpio.gz
+  253  cd ..
+  254  ls
+  255  qemu-system-arm -kernel _install/boot/zImage -initrd rootfs.cpio.gz -machine virt -nographic -m 512 --append "root=/dev/ram0 rw console=ttyAMA0,115200 mem=512M"
+  256  cd ..
+  257  ls
+  258  cd Downloads
+  259  touch HISTORY
+  260  ls
+  261  history
+  262  history > HISTORY.txt
+  263  ls
+  264  rm HISTORY
+  265  ls
+  266  cat HISTORY.txt
+  267  cd repos/busybox
+  268  ls
+  269  cd _install
+  270  ls
+  271  cd root
+  272  ls
+  273  cd ..
+  274  ls
+  275  mkdir hello
+  276  cd hello
+  277  touch hello.c
+  278  ls
+  279  export KDIR=$HOME/repos/linux-stable
+  280  export PATH=/opt/gcc-arm-8.3-2019.03=2019-x86_64-arm-linux-gnueabihf/bin:$PATH
+  281  export CROSS_COMPILE='ccache arm-linux-gnueabihf-'
+  282  export ARCH=arm
+  283  vim hello.c
+  284  cat hello.c
+  285  make
+  286  ls
+  287  touch Makefile
+  288  vim Makefile
+  289  cat Makefile
+  290  make
+  291  vim Makefile
+  292  cat Makefile
+  293  make
+  294  cd Downloads
+  295  cd /Downloads/
+  296  cd ~/Downloads
+  297  ls
+  298  export KDIR=$HOME/repos/linux-stable
+  299  export PATH=/opt/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin:$PATH
+  300  export CROSS_COMPILE='ccache arm-linux-gnueabihf-'
+  301  export ARCH=arm
+  302  cd ~/hello
+  303  ls
+  304  make
+  305  cat hello.c
+  306  cat Makefile
+  307  vim hello.c
+  308  rm hello.c
+  309  vim hello.c
+  310  make
+  311  ls
+  312  cp hello.ko ~/repos/busybox/_install/hello.ko
+  313  cd
+  314  cd repos/busybox/_install
+  315  find . | cpio -o -H newc | gzip > ../rootfs.cpio.gz
+  316  ls
+  317  cd ..
+  318  ls
+  319  qemu-system-arm-kernel _install/boot/zImage -initrd rootfs.cpio.gz -machine virt -nographic -m 512 --append "root=/dev/ram0 rw console=ttyAMA0,115200 mem=512M"
+  320  qemu-system-arm -kernel _install/boot/zImage -initrd rootfs.cpio.gz -machine virt -nographic -m 512 --append "root=/dev/ram0 rw console=ttyAMA0,115200 mem=512M"
+  321  ls
+  322  cd. .
+  323  cd ..
+  324  ls
+  325  cd ..
+  326  ls
+  327  cd hello
+  328  ls
+  329  rm hello.ko
+  330  rm hello.mod.c
+  331  rm hello.mod.o
+  332  rm hello.o
+  333  rm modules.order
+  334  rm Module.symvers
+  335  ls
+  336  vim hello.c
+  337  make
+  338  ls
+  339  cp hello.ko ~/repos/busybox/_install/hello.ko
+  340  cd
+  341  cd repos
+  342  cd busybox
+  343  cd _install
+  344  find . 
+  345  find . | cpio -o -H newc | gzip > ../rootfs.cpio.gz
+  346  cd ..
+  347  qemu-system-arm -kernel _install/boot/zImage -initrd rootfs.cpio.gz -machine virt -nographic -m 512 --append "root=/dev/ram0 rw console=ttyAMA0,115200 mem=512M"
+  348  cd. .
+  349  cd ..
+  350  cd hello
+  351  ls
+  352  $KDIR/scripts/checkpatch.pl -f hello.c
+  353  $KDIR/scripts/checkpatch.pl --fix hello.c
+  354  $KDIR/scripts/checkpatch.pl --fix-inplace hello.c
+  355  $KDIR/scripts/checkpatch.pl -f hello.c
+  356  cat hello.c
+  357  ls
+  358  rm hello.ko,hello.o
+  359  rm hello.ko | hello.mod.c
+  360  rm hello.ko
+  361  rm hello.mod.c
+  362  rm hello.mod.o
+  363  rm hello.o
+  364  rm modules.order
+  365  rm Module.symvers
+  366  ls
+  367  rm hello.c
+  368  vim hello.c
+  369  cat hello.c
+  370  make
+  371  cp hello.ko ~/repos/busybox/_install/hello.ko
+  372  cd ..
+  373  cd repos/busybox/_install
+  374  cd ..
+  375  cd hello
+  376  $KDIR/scripts/checkpatch.pl -f hello.c
+  377  cat hello.ko
+  378  cat hello.c
+  379  cd ..
+  380  cd repos/busybox/_install
+  381  find . | cpio -o -H newc | gzip > ../rootfs.cpio.gz
+  382  cd ..
+  383  qemu-system-arm -kernel _install/boot/zImage -initrd rootfs.cpio.gz -machine virt -nographic -m 512 --append "root=/dev/ram0 rw console=ttyAMA0,115200 mem=512M"
+  384  cd ..
+  385  cd hello
+  386  ls
+  387  cp hello.c > ~/Downloads
+  388  cp hello.c > ~/Downloads/hello.c
+  389  cp hello.c > ~/Downloads/hello.c/
+  390  cp hello.c ~/Downloads/hello.c/
+  391  cp hello.c ~/Downloads/hello.c
+  392  cd ..
+  393  cd Downloads
+  394  ls
+  395  cat hello.c
+  396  cd ..
+  397  cd hello
+  398  cp Makefile ~/Downloads/
+  399  cd ..
+  400  ls
+  401  cd Downloads
+  402  ls
+  403  cat Makefile
+  404  rm HISTORY.txt
+  405  ls
+  406  history > HISTORY.txt
+  407  ls
+  408  cat HISTORY.txt
+  409  ls
+  410  cd hello
+  411  ls
+  412  cd ..
+  413  mkdir hello2
+  414  cd hello2
+  415  touch hello1.c
+  416  touch hello2.c
+  417  touch Makefile
+  418  mkdir inc
+  419  cd inc
+  420  touch hello1.h
+  421  cd ..
+  422  vim hello1.c
+  423  cat hello1.c
+  424  vim hello2.c
+  425  vim Makefile
+  426  ls
+  427  cd inc
+  428  ls
+  429  vim hello1.h
+  430  cd ..
+  431  cd hello2
+  432  cd ..
+  433  ls /Downloads
+  434  ls Downloads
+  435  cd hello2
+  436  export KDIR=$HOME/repos/linux-stable
+  437  export PATH=/opt/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin:$PATH
+  438  export CROSS_COMPILE='ccache arm-linux-gnueabihf-'
+  439  export ARCH=arm
+  440  make
+  441  vim Makefile
+  442  make
+  443  ls
+  444  cp hello1.ko ~/repos/busybox/_install/hello1.ko
+  445  cp hello2.ko ~/repos/busybox/_install/hello2.ko
+  446  cd
+  447  cd repos/busybox/_install
+  448  find . | cpio -o -H newc | gzip > ../rootfs.cpio.gz
+  449  ls
+  450  cd ..
+  451  ls
+  452  qemu-system-arm -kernel _install/boot/zImage -initrd rootfs.cpio.gz -machine virt -nographic -m 512 --append "root=/dev/ram0 rw console=ttyAMA0,115200 mem=512M"
+  453  cd ..
+  454  cd .
+  455  cd
+  456  cd Downloads
+  457  ls
+  458  rm HISTORY.txt
+  459  history > HISTORY.txt
